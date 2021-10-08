@@ -7,14 +7,14 @@ export const stock = [
     {
         id: 1,
         name: "Lapices de colores",
-        description: "Caja de 12 lapices",
+        description: "Caja de 24 lapices",
         price: 405,
         img: lapicesgiotto
     },
     {
         id: 2,
         name: "Fibras de colores",
-        description: "Caja de 20 fibras",
+        description: "Caja de 10 fibras",
         price: 250,
         img: fibrasfilgo
     },
