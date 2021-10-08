@@ -1,9 +1,7 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 
-export const Item = ( {id, name, price, img, description} ) => {
-
-    // console.log(props)
+export const Item = ( {name, price, img, description} ) => {
 
     return (
 
@@ -14,7 +12,7 @@ export const Item = ( {id, name, price, img, description} ) => {
                 <Card.Text>{description}</Card.Text>
                 <Card.Text>Precio: ${price}</Card.Text>
 
-                <Button variant="primary">Agregar +</Button>
+                <Button variant="dark">Agregar +</Button>
             </Card.Body>
         </Card>
     )
