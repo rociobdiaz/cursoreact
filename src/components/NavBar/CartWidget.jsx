@@ -1,9 +1,8 @@
 import React from 'react'
+import {FaShoppingBasket} from 'react-icons/fa';
 
 export const CartWidget = () => {
     return (
-        <div>
-            <img src="iconocart.png" alt="logo"/>
-        </div>
+        <FaShoppingBasket className="widget"/>
     )
 }
