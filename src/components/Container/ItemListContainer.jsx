@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { pedirProductos } from '../Helpers/productos';
+import { ItemList } from './ItemList';
 
-export const ItemListContainer = ({greeting}) => {
+
+
+
+
+export const ItemListContainer = () => {
+
+    const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    useEffect(()=>{
+        setLoading(true)
+
+        pedirProductos()
+            .then((res) => {
+                setItems(res)
+            })
+            .catch((err) => console.log(err))
+            .finally(() => {
+                setLoading(false)
+                console.log("Fin del llamado")
+            })
+
+    }, [])
+
     return (
-        <div>
-            <p>BIENVENID@S</p>
-            <p>{greeting}</p>
-        </div>
-    )
-}
+        <section className="container my-5">
+            {
+                loading 
+                    ? <h2>Cargando...</h2>
+                    : <ItemList productos={items}/>
+            }
+            
+        </section>
+    )}
