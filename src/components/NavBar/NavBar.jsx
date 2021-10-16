@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 import './Navbar.scss';
 
+
 /* export const NavBar = ({titulo, greeting}) => {
     return (
         <section>
@@ -31,7 +32,7 @@ import './Navbar.scss';
 export const NavBar = ({ logo }) => {
     return (
         <header className="header">
-            <h1>logo</h1>
+            <h1>{logo}</h1>
 
             <div>
                 <nav>
