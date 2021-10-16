@@ -7,7 +7,7 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  Redirect
+  Redirect,
 } from 'react-router-dom'
 
 
@@ -18,6 +18,21 @@ function App() {
       <BrowserRouter>
 
         <NavBar logo="Libreria"/>
+
+        {/* <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="#home">
+              <img
+                alt="logolibreria"
+                src="/"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}
+              React Bootstrap
+            </Navbar.Brand>
+          </Container>
+        </Navbar> */}
         
         <Switch>
           <Route exact path="/">

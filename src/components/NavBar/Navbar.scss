@@ -2,13 +2,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #8a2be2;
+    background-color: black;
     padding: 12px 10%;
 
     h1 {
         font-size: 36px;
         font-weight: 700;
         color: white;
+    }
+
+    a{
+        color: white;
+        font-weight: 700;
+        font-size: 22px;
+        text-decoration: none;
+        padding: 10px;   
     }
 
     div {
@@ -21,14 +29,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            a {
-                color: white;
-                font-weight: 700;
-                font-size: 22px;
-                text-decoration: none;
-                padding: 10px;
-            }
 
             .activeLink {
                 border: 2px white solid;

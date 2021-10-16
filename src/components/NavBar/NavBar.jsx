@@ -3,36 +3,15 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { CartWidget } from './CartWidget';
 import './Navbar.scss';
-
-
-/* export const NavBar = ({titulo, greeting}) => {
-    return (
-        <section>
-            
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="#home">{titulo}</Navbar.Brand>
-                    <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    <CartWidget />
-                    </Nav>
-                </Container>
-            </Navbar>
-
-            <div>
-                <p>{greeting}</p>
-            </div>
-            
-        </section>
-    )
-} */
+import loguito from '../Data/imagenes/logo.png'
 
 export const NavBar = ({ logo }) => {
     return (
         <header className="header">
-            <h1>{logo}</h1>
+            <a href="/">
+                <img src={loguito} alt="logo libreria" />
+                Librería Pencil Case
+            </a>
 
             <div>
                 <nav>
