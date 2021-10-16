@@ -1,7 +1,52 @@
 
 
-.widget{
+/* .widget{
     color: white;
     margin: auto;
     width: 30px;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 12px 10%;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: white;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                color: white;
+                font-weight: 700;
+                font-size: 22px;
+                text-decoration: none;
+                padding: 10px;
+            }
+
+            .activeLink {
+                border: 2px white solid;
+                border-radius: 5px;
+            }
+        }
+
+        .widget {
+            color: white;
+            font-size: 30px;
+        }
+    }
 }
