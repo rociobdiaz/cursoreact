@@ -11,6 +11,9 @@ Posee componentes de enrutamiento que permite una navegación sin recargas.
 * nodemon: 2.0.7,
 * bootstrap: 5.0.1
 
+## Visualizacion
+Abrir [http://localhost:3000](http://localhost:3000).
+
 ## Autor
 
 Rocío Díaz 
