@@ -54,19 +54,4 @@ function App() {
   );
 }
 
-
-/* function App() {
-  return (
-    <div className="App">
-      <header>
-        <NavBar titulo="Librería"/>
-      </header>
-      <div className="products">
-        <ItemListContainer />
-      </div>
-      
-    </div>
-  );
-} */
-
 export default App;
