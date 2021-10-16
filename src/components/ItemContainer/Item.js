@@ -1,12 +1,13 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
+import './Items.scss'
 
 export const Item = ( {id, name, price, img, description} ) => {
 
     return (
 
-        <Card style={{ width: '18rem' }} className="m-3">
+        <Card style={{ width: '18rem' }} className="m-3 card">
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>

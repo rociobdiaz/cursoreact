@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+}
+.box__container--row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.card{
+    text-align: center;
+}
