@@ -12,42 +12,48 @@ export const stock = [
         name: "Lapices de colores",
         description: "Caja de 24 lapices",
         price: 405,
-        img: lapicesgiotto
+        img: lapicesgiotto,
+        category: 'libreria'
     },
     {
         id: 2,
         name: "Fibras de colores",
         description: "Caja de 10 fibras",
         price: 250,
-        img: fibrasfilgo
+        img: fibrasfilgo,
+        category: 'libreria'
     },
     {
         id: 3,
         name: "Crayones de cera",
         description: "Caja de 24 crayones",
         price: 650,
-        img: crayonescrayola
+        img: crayonescrayola,
+        category: 'libreria'
     },
     {
         id: 4,
         name: "Resma A4",
         description: "Resma tamaño A4 80gr",
         price: 420,
-        img: resma
+        img: resma,
+        category: 'papelera'
     },
     {
         id: 5,
         name: "Cinta adhesiva",
         description: "Cinta adhesiva transparente",
         price: 280,
-        img: cintatransparente
+        img: cintatransparente,
+        category: 'papelera'
     },
     {
         id: 6,
         name: "Cinta de papel",
         description: "Cinta de papel",
         price: 290,
-        img: cintapapel
+        img: cintapapel,
+        category: 'papelera'
     }
     
 ]
