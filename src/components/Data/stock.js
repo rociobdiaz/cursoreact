@@ -13,7 +13,8 @@ export const stock = [
         description: "Caja de 24 lapices",
         price: 405,
         img: lapicesgiotto,
-        category: 'libreria'
+        category: 'libreria',
+        stock: 10
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ export const stock = [
         description: "Caja de 10 fibras",
         price: 250,
         img: fibrasfilgo,
-        category: 'libreria'
+        category: 'libreria',
+        stock: 10
     },
     {
         id: 3,
@@ -29,7 +31,8 @@ export const stock = [
         description: "Caja de 24 crayones",
         price: 650,
         img: crayonescrayola,
-        category: 'libreria'
+        category: 'libreria',
+        stock: 10
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export const stock = [
         description: "Resma tamaño A4 80gr",
         price: 420,
         img: resma,
-        category: 'papelera'
+        category: 'papelera',
+        stock: 10
     },
     {
         id: 5,
@@ -45,7 +49,8 @@ export const stock = [
         description: "Cinta adhesiva transparente",
         price: 280,
         img: cintatransparente,
-        category: 'papelera'
+        category: 'papelera',
+        stock: 10
     },
     {
         id: 6,
@@ -53,7 +58,8 @@ export const stock = [
         description: "Cinta de papel",
         price: 290,
         img: cintapapel,
-        category: 'papelera'
+        category: 'papelera',
+        stock: 10
     }
     
 ]

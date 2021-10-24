@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { pedirProductos } from '../Helpers/productos';
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router';
-
+import { UIContext } from '../../context/UIContext'
 
 
 
@@ -10,7 +10,9 @@ import { useParams } from 'react-router';
 export const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
-    const [loading, setLoading] = useState(false)
+    
+    const {loading, setLoading} = useContext(UIContext)
+
     const {categoryId} = useParams()
 
     useEffect(()=>{
@@ -32,7 +34,7 @@ export const ItemListContainer = () => {
                 console.log("Fin del llamado")
             })
 
-    }, [categoryId])
+    }, [categoryId, setLoading])
 
     return (
         <section className="container my-5">
