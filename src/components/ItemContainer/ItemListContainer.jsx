@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { pedirProductos } from '../Helpers/productos';
+import { getFirestore } from '../Firebase/config';
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router';
 import { UIContext } from '../../context/UIContext'
@@ -18,17 +18,21 @@ export const ItemListContainer = () => {
     useEffect(()=>{
         setLoading(true)
 
-        pedirProductos()
-            .then((res) => {
-                if (categoryId){
-                    setItems( res.filter(prod => prod.category === categoryId))
-                }else {
-                    setItems(res)
-                }
+            const db = getFirestore()
+            const prod = categoryId 
+                                ? db.collection('Productos').where('category', '==', categoryId)
+                                : db.collection('Productos')
 
+            prod.get()
+                .then((response) => {
+                    const newItems = response.docs.map((doc) => {
+                        return {id: doc.id, ...doc.data()}
+                    })
                 
+                setItems(newItems)
             })
-            .catch((err) => console.log(err))
+
+            .catch( err => console.log(err))
             .finally(() => {
                 setLoading(false)
                 console.log("Fin del llamado")
