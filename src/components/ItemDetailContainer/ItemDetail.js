@@ -19,6 +19,7 @@ export const ItemDetail = ({ id, name, price, img, description, category, stock}
     const handleAgregar = () => {
         const newItem = {
             id,
+            img,
             name,
             price,
             category,
@@ -46,34 +47,40 @@ export const ItemDetail = ({ id, name, price, img, description, category, stock}
                     <h2>{name}</h2>
                     <p>{description}</p>
                     <h4>Precio: ${price}</h4>
+                 
+
+                    <div className={isInCart(id) && "desactivado"} >
+
+                        <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
+                        
+                        <div className="box__detail--buttons">
+                            <button
+                                disabled={cantidad === 0}
+                                className={styles.btnAgregar}
+                                onClick={handleAgregar}
+                            >
+                                Agregar
+                            </button>
+
+                            <Link to="/cart" className={styles.btnTerminar}>Terminar mi compra</Link>
+                        </div>
+                    </div>   
                 </div>  
             </div>
             
-            <div className={isInCart(id) && "desactivado"} >
+                        
 
-                <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
-                <button
-                    disabled={cantidad === 0}
-                    className={styles.btnAgregar}
-                    onClick={handleAgregar}
-                >
-                    Agregar
-                </button>
-
-                <Link to="/cart" className={styles.btnTerminar}>Terminar mi compra</Link>
-                          
-
-                <hr/>
-                
-                <button 
-                className="btn btn-primary"
-                onClick={() => goBack()}
-                >
-                    Volver
-                </button>
+            <hr/>
+            
+            <button 
+            className="go-back btn btn-primary"
+            onClick={() => goBack()}
+            >
+                Volver
+            </button>
 
                 
-            </div>
+            
             
         </>
     )

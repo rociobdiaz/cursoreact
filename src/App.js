@@ -12,7 +12,9 @@ import {
 import { CartProvider } from './context/CartContext';
 import { CartScreen } from './components/CartScreen/CartScreen';
 import { UIProvider } from './context/UIContext';
-
+import { Checkout } from './components/Checkout/Checkout';
+import { Form } from './components/Contact/Contact'
+import { Footer } from './components/Footer/Footer'
 
 function App() {  
 
@@ -38,20 +40,24 @@ function App() {
               </Route>
 
               <Route exact path="/contacto">
-                  <h1>Contacto</h1>
+                  <Form />
               </Route>
 
               <Route exact path="/cart">
                 <CartScreen/>
               </Route>
 
+              <Route exact path="/checkout">
+                <Checkout/>
+              </Route>
+
               <Route path="*">
                   <Redirect to="/"/>
               </Route>
-              {/* <Route path="*">
-                  <h2>404... no encontrado</h2>
-              </Route> */}
+              
             </Switch>
+
+            <Footer />
 
           </BrowserRouter>
         </CartProvider>

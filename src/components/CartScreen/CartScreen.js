@@ -1,31 +1,30 @@
 import React, { useContext } from 'react'
 import { BsFillTrashFill } from 'react-icons/bs'
-import { /* Link */ Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
+import './CartScreen.scss'
 
 export const CartScreen = () => {
-
     const {carrito, vaciarCarrito, removeItem, calcularTotal} = useContext(CartContext)
-
-
     return (
         <div className="container my-5">
-
             {
-                carrito.length === 0
+                carrito.length === 0 
                 ? <>
-                    <Redirect to="/"/>
-                    {/* <h2>No hay productos agregados</h2>
-                    <Link to="/" className="btn btn-success">Ir a comprar</Link> */}
+                    
+                    <h2>No hay productos agregados</h2>
+                    <Link to="/" className="btn btn-success">Ir a comprar</Link>
                  </>
-                :
+                : 
                     <>
                         <h2>Resumen de compra</h2>
                         <hr/>
-
                         {
                             carrito.map( (prod) => (
-                                <div>
+                                <div className="cart__view">
+                                    <div className="cart__view--img">
+                                        <img src={prod.img} alt={prod.name}/>
+                                    </div>
                                     <h4>{prod.name}</h4>
                                     <p>Cantidad: {prod.cantidad}</p>
                                     <p>Precio: {prod.price * prod.cantidad}</p>
@@ -35,7 +34,6 @@ export const CartScreen = () => {
                                 </div>
                             ))
                         }
-
                         <hr/>
                         <h3 className="my-3">Precio total: ${calcularTotal()}</h3>
                         <button
@@ -44,6 +42,10 @@ export const CartScreen = () => {
                         >
                             Vaciar carrito
                         </button>
+
+                        <Link to="/checkout" className="btn btn-success mx-3">
+                            Terminar mi compra
+                        </Link>
                     </>
             } 
 

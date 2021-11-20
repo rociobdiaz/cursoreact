@@ -1,0 +1,9 @@
+.cart__view{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    &--img img{
+        max-width: 150px;
+    }
+}

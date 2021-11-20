@@ -10,6 +10,7 @@ p{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+
     &--img{
         img{
             max-width: 450px;
@@ -20,9 +21,18 @@ p{
         text-align: center;
         padding-top: 20px;
     }
+    &--buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+        button{
+            margin-bottom: 5px;
+        }
+    }
+    
 }
-.box__buttons{
+.go-back{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    margin: auto;
 }
