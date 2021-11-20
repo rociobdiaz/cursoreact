@@ -65,7 +65,6 @@ export const Checkout = () => {
         setLoading(true)
         orders.add(orden)
             .then((res) => {
-                console.log(res.id)
 
                 Swal.fire({
                     icon: 'success',
